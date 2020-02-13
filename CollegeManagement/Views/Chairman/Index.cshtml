@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CollegeDetail.Detail>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@foreach(CollegeDetail.Detail item in ViewBag.Package)
+{
+    <tr>
+        <td>
+            @item.collegeName
+        </td>
+        <td>
+            @item.collegeRank
+        </td>
+    </tr>
+}
+

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "TempDataChecking";
+}
+
+<h2>TempDataChecking</h2>
+<h3>Package Details-TempData</h3>
+<table border="1">
+    <tr>
+        <td>College Name</td>
+        <td>College Rank</td>
+    </tr>
+    @foreach (CollegeDetail.Detail item in (List<CollegeDetail.Detail>)TempData["packages"])
+    {
+        <tr>
+            <td>
+                @item.collegeName
+            </td>
+            <td>
+                @item.collegeRank
+            </td>
+        </tr>
+    }
+</table>
+
+
