@@ -1,18 +1,24 @@
 ﻿@model IEnumerable<CollegeDetail.Detail>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Package";
 }
-
-<h2>Index</h2>
-@foreach(CollegeDetail.Detail item in ViewBag.Package)
-{
+<table border="1">
     <tr>
-        <td>
-            @item.collegeName
-        </td>
-        <td>
-            @item.collegeRank
-        </td>
+        <td>College Name</td>
+        <td>collge rank</td>
     </tr>
-}
+
+    <h2>Index</h2>
+    @foreach (CollegeDetail.Detail item in @Model)
+    {
+        <tr>
+            <td>
+                @item.collegeName
+            </td>
+            <td>
+                @item.collegeRank
+            </td>
+        </tr>
+    }
+
 

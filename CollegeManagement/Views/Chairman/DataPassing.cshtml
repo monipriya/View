@@ -3,21 +3,26 @@
     ViewBag.Title = "DataPassing";
 }
 
-<h2>DataPassing</h2>
-<table>
-    @foreach(CollegeDetail.Detail item in (List<CollegeDetail.Detail>)ViewData["Packages"])
-    {
-        <tr>
-            <td>
-                @item.collegeCode
-            </td>
-            <td>
-                @item.collegeName
-            </td>
-            <td>
-                @item.collegeRank
+<table border="1">
+    <tr>
+        <td>college code</td>
+        <td>College Name</td>
+        <td>collge rank</td>
+    </tr>
+    <h2>DataPassing</h2>
+        @foreach (CollegeDetail.Detail item in (List<CollegeDetail.Detail>)ViewData["Packages"])
+        {
+            <tr>
+                <td>
+                    @item.collegeCode
+                </td>
+                <td>
+                    @item.collegeName
+                </td>
+                <td>
+                    @item.collegeRank
             </td>
         </tr>
-    }
-</table>
+        }
+    </table>
 

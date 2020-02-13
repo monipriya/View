@@ -11,9 +11,9 @@ namespace Repository
         public static List<Detail> package = new List<Detail>();
         static CollegeRepository()
         {
-            package.Add(new Detail(1, "Kerala", 15000));
-            package.Add(new Detail(2, "Goa", 15000));
-            package.Add(new Detail(3, "Kashmir", 10000));
+            package.Add(new Detail(4536, "KSR",2));
+            package.Add(new Detail(2654, "SAKTHI",6));
+            package.Add(new Detail(3856, "SRI ESWAR",7));
         }
         public IEnumerable<Detail> GetCollegeDetails()
         {
