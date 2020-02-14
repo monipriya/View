@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Repository;
-using CollegeDetail;
+using CollegeDetail.Entity;
 namespace CollegeManagement.Controllers
 {
     public class ChairmanController : Controller
@@ -30,5 +30,41 @@ namespace CollegeManagement.Controllers
             TempData["packages"] = packages;
             return View();
         }
+       
+    [HttpGet]
+    public ActionResult Create()
+    {
+        return View();
     }
+    [HttpPost]
+    public ActionResult Create(Detail Detail)
+    {
+           package.AddPackage(Detail);
+        TempData["Message"] = "Package added";
+        return RedirectToAction("Index");
+        
+    }
+    public ActionResult Edit(int id)
+    {
+            Detail pack = package.GetPackageById(id);
+        return View(pack);
+    }
+    public ActionResult Delete(int id)
+    {
+        package.DeletePackage(id);
+        TempData["Message"] = "Package deleted";
+        return RedirectToAction("Index");
+    }
+    [HttpPost]
+    public ActionResult Update(Detail packageDetails)
+    {
+        // if (ModelState.IsValid)
+        //{
+        package.UpdatePackage(packageDetails);
+        TempData["Message"] = "Package updated";
+        return RedirectToAction("Index");
+        //}
+        //return View("Edit",packageDetails);
+    }
+}
 }

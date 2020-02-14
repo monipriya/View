@@ -10,7 +10,7 @@
         <td>collge rank</td>
     </tr>
     <h2>DataPassing</h2>
-        @foreach (CollegeDetail.Detail item in (List<CollegeDetail.Detail>)ViewData["Packages"])
+        @foreach (CollegeDetail.Entity.Detail item in (List<CollegeDetail.Entity.Detail>)ViewData["Packages"])
         {
             <tr>
                 <td>
@@ -25,4 +25,23 @@
         </tr>
         }
     </table>
+<h3>College Details-ViewBag</h3>
+<table border="1">
+    <tr>
+        <td>college Name</td>
+        <td>College Rank</td>
+    </tr>
+    @foreach (CollegeDetail.Entity.Detail item in ViewBag.Package)
+    {
+        <tr>
+            <td>
+                @item.collegeName
+            </td>
+            <td>
+                @item.collegeRank
+            </td>
+        </tr>
+    }
+</table>
+
 

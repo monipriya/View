@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CollegeDetail;
+﻿using System.Collections.Generic;
+using CollegeDetail.Entity;
 namespace Repository
 {
     public class CollegeRepository
@@ -18,6 +14,27 @@ namespace Repository
         public IEnumerable<Detail> GetCollegeDetails()
         {
             return package;
+        }
+        public void AddPackage(Detail packageDetails)
+        {
+            package.Add(packageDetails);
+        }
+        public Detail GetPackageById(int packageId)
+        {
+            return package.Find(id => id.collegeCode == packageId);
+        }
+        public void DeletePackage(int packageId)
+        {
+            Detail pack = GetPackageById(packageId);
+            if (pack != null)
+                package.Remove(pack);
+        }
+        public void UpdatePackage(Detail pack)
+        {
+            //PackageDetails packages = package.Find(id => id.PackageId == pack.PackageId);
+            Detail packages = GetPackageById(pack.collegeCode);
+            packages.collegeName = pack.collegeName;
+            packages.collegeRank = pack.collegeRank;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace CollegeDetail
+﻿namespace CollegeDetail.Entity
 {
     public class Detail
     {

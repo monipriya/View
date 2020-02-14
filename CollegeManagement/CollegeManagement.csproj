@@ -155,6 +155,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\create.cshtml" />
+    <Content Include="Views\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -169,13 +171,13 @@
     <Folder Include="Views\CollegeRepository\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CollegeDetail\CollegeDetail.csproj">
+    <ProjectReference Include="..\CollegeDetail\CollegeDetail.Entity.csproj">
       <Project>{81be3e04-31c9-43ea-ba0c-50790e1138b7}</Project>
-      <Name>CollegeDetail</Name>
+      <Name>CollegeDetail.Entity</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Repository\Repository.csproj">
+    <ProjectReference Include="..\Repository\Repository.BL.csproj">
       <Project>{d0a632dc-c846-4238-909d-ef6ccc7b42f9}</Project>
-      <Name>Repository</Name>
+      <Name>Repository.BL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -5,9 +5,9 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeManagement", "CollegeManagement\CollegeManagement.csproj", "{4048AF2A-05FD-4729-84CC-43852F1AAF11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeDetail", "CollegeDetail\CollegeDetail.csproj", "{81BE3E04-31C9-43EA-BA0C-50790E1138B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollegeDetail.Entity", "CollegeDetail\CollegeDetail.Entity.csproj", "{81BE3E04-31C9-43EA-BA0C-50790E1138B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{D0A632DC-C846-4238-909D-EF6CCC7B42F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.BL", "Repository\Repository.BL.csproj", "{D0A632DC-C846-4238-909D-EF6CCC7B42F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

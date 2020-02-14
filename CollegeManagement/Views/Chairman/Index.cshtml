@@ -1,15 +1,22 @@
-﻿@model IEnumerable<CollegeDetail.Detail>
+﻿@model IEnumerable<CollegeDetail.Entity.Detail>
 @{
     ViewBag.Title = "Package";
+}
+Html.ActionLink("Create New Package","Create")<br />
+
+@if (TempData["Message"] != null)
+{
+    @Html.Label((string)TempData["Message"])
 }
 <table border="1">
     <tr>
         <td>College Name</td>
         <td>collge rank</td>
+        <td>Choice</td>
     </tr>
 
     <h2>Index</h2>
-    @foreach (CollegeDetail.Detail item in @Model)
+    @foreach (CollegeDetail.Entity.Detail item in @Model)
     {
         <tr>
             <td>
@@ -17,6 +24,10 @@
             </td>
             <td>
                 @item.collegeRank
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.collegeCode })
+                @Html.ActionLink("Delete", "Delete", new { id = item.collegeCode })
             </td>
         </tr>
     }
