@@ -12,5 +12,7 @@
             collegeName = name;
             collegeRank = rank;
         }
+        public Detail()
+        { }
     }
 }
