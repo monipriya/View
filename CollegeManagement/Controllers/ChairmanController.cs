@@ -37,9 +37,12 @@ namespace CollegeManagement.Controllers
         return View();
     }
     [HttpPost]
-    public ActionResult Create(Detail Detail)
+    public ActionResult create()
     {
-           package.AddPackage(Detail);
+            Detail Detail = new Detail();
+          //  UpdateModel(Detail);
+            TryUpdateModel(Detail);
+            package.AddPackage(Detail);
         TempData["Message"] = "Package added";
         return RedirectToAction("Index");
         
